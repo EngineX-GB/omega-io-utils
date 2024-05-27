@@ -1,3 +1,4 @@
 feeds/
 .venv/
 .idea/
+*.pyc
