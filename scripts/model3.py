@@ -1,13 +1,28 @@
 # take in a file with just URL links.
 # script will resolve the links and populate the final feed.
 
-import os
-import urllib
 import requests
 import re
-import sys
 
-from DataDto import DataDto
+
+class DataDto:
+
+    def __init__(self, link, outputFileName, strategyMode):
+        self.link = link
+        self.outputFileName = outputFileName
+        self.strategyMode = strategyMode
+
+    def getLink(self):
+        return self.link
+
+    def getOutputFileName(self):
+        return self.outputFileName
+
+    def getStrategyMode(self):
+        return self.strategyMode
+
+    def getRecord(self):
+        return ((self.outputFileName + "|" + self.strategyMode + "|" + self.link))
 
 def parseLink (url):
     url = url.strip('\n')
