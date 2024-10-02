@@ -3,6 +3,7 @@
 
 import requests
 import re
+import sys
 
 
 class DataDto:
@@ -52,7 +53,7 @@ def parseLink (url):
 
 if __name__ == "__main__":
     feedlines = list()
-    file = open("input.txt", 'r')
+    file = open(sys.argv[1], 'r')
     lines = file.readlines()
     for line in lines:
         dto = parseLink(line)

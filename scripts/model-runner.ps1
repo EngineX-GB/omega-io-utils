@@ -60,9 +60,8 @@ switch($model) {
     }
     "model3" {
         Write-Output "Running model3";
-        $URL = $arg1
-        $CHANNEL_NAME = $arg2
-        python $SCRIPTS_DIRECTORY\$model".py"
+        $FILEPATH = $arg1
+        python $SCRIPTS_DIRECTORY\$model".py" $FILEPATH
     }
     "--help" {
         Write-Output "Commands : "
