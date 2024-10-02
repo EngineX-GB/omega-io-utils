@@ -20,7 +20,7 @@ function create_config_file {
     $json | Set-Content -Path $path
 }
 
-$SCRIPTS_DIRECTORY = $PSScriptRoot + "\\scripts1"
+$SCRIPTS_DIRECTORY = $PSScriptRoot
 $JSON_CONFIG_PATH = $SCRIPTS_DIRECTORY + "\\config.json"
 Write-Output $JSON_CONFIG_PATH
 
