@@ -72,7 +72,7 @@ def writeInputFile(dataDtoList: set, feed_file_name : str):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 5:
+    if len(sys.argv) < 4:
         print("[ERROR] Incorrect number of arguments. Current length is "+ str(len(sys.argv)))
         print("[INFO] Example command : ")
         print("[INFO] python model4.py <hostname> <name search> <strategyMode> <feed_file_name>")

@@ -67,7 +67,7 @@ switch($model) {
         Write-Output "Running model4";
         $DOMAIN_NAME = $arg1
         $QUERY = $arg2
-        $FEED_FILE_NAME = $args3
+        $FEED_FILE_NAME = $arg3
         python $SCRIPTS_DIRECTORY\$model".py" $DOMAIN_NAME $QUERY "SINGLE_FILE" $FEED_FILE_NAME
     }
     "--help" {
