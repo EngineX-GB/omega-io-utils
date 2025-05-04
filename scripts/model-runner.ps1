@@ -63,11 +63,19 @@ switch($model) {
         $FILEPATH = $arg1
         python $SCRIPTS_DIRECTORY\$model".py" $FILEPATH
     }
+    "model4" {
+        Write-Output "Running model4";
+        $DOMAIN_NAME = $arg1
+        $QUERY = $arg2
+        $FEED_FILE_NAME = $args3
+        python $SCRIPTS_DIRECTORY\$model".py" $DOMAIN_NAME $QUERY "SINGLE_FILE" $FEED_FILE_NAME
+    }
     "--help" {
         Write-Output "Commands : "
         Write-Output "model1 <url> <channel-name> <feed-file-name>"
         Write-Output "model2 <url> <channel-name>"
         Write-Output "model3 <-- Requires the existence of input.txt to contain entries for media resolution"
+        Write-Output "model4 <domain_name> <query_string> <feed_file_name>"
     }
     default {
         Write-Output "Unknown model: $model"
@@ -76,6 +84,7 @@ switch($model) {
         Write-Output "model1 <url> <channel-name> <feed-file-name>"
         Write-Output "model2 <url> <channel-name>"
         Write-Output "model3 <-- Requires the existence of input.txt to contain entries for media resolution"
+        Write-Output "model4 <domain_name> <query_string> <feed_file_name>"
     }
 }
 
