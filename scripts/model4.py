@@ -88,7 +88,7 @@ if __name__ == "__main__":
     startPage = hostname + "/page/1/?s=" + search_query
     print("[INFO] Starting URL : " + startPage)
 
-    for i in range(25,26):
+    for i in range(1,100):
         linkData = extractUrlPageLinks(hostname + "/page/" + str(i) + "/?s=" + search_query)
         if len(linkData) == 0:
             break
