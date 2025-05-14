@@ -70,12 +70,19 @@ switch($model) {
         $FEED_FILE_NAME = $arg3
         python $SCRIPTS_DIRECTORY\$model".py" $DOMAIN_NAME $QUERY "SINGLE_FILE" $FEED_FILE_NAME
     }
+    "model5" {
+        Write-Output "Running model5";
+        $INPUT_FEED_FILE_NAME = $arg1
+        $OUTPUT_FEED_FILE_NAME = $arg2
+        python $SCRIPTS_DIRECTORY\$model".py" $INPUT_FEED_FILE_NAME $OUTPUT_FEED_FILE_NAME
+    }
     "--help" {
         Write-Output "Commands : "
         Write-Output "model1 <url> <channel-name> <feed-file-name>"
         Write-Output "model2 <url> <channel-name>"
         Write-Output "model3 <-- Requires the existence of input.txt to contain entries for media resolution"
         Write-Output "model4 <domain_name> <query_string> <feed_file_name>"
+        Write-Output "model5 <input_feed_file_name> <output_feed_file_name>"
     }
     default {
         Write-Output "Unknown model: $model"
@@ -85,6 +92,7 @@ switch($model) {
         Write-Output "model2 <url> <channel-name>"
         Write-Output "model3 <-- Requires the existence of input.txt to contain entries for media resolution"
         Write-Output "model4 <domain_name> <query_string> <feed_file_name>"
+        Write-Output "model5 <input_feed_file_name> <output_feed_file_name>"
     }
 }
 
