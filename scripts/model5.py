@@ -32,7 +32,7 @@ def extractData(url : str, mode : str):
     title = ""
     if file_matches:
         file = file_matches[0]
-
+        file = file.replace(" ", "%20")
     title_pattern = r'<title>(.*?)</title>'
     title_matches = re.findall(title_pattern, source.text)
     if title_matches:
